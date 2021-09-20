@@ -21,7 +21,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
         <form action="insert.php" method="post">
             <label for="nome">Nome</label>
             <input type="text" name="nome" />
-            <button type="button">Salvar</button>
+            <button type="submit">Salvar</button>
         </form>
     </body>
 </html>
