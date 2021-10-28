@@ -10,6 +10,8 @@ $comando->execute();
 
 $livros = $comando->fetchAll(PDO::FETCH_ASSOC);
 
+$_title = 'Livros';
+
 ?>
 
 <?php include('./includes/header.php'); ?>
@@ -26,8 +28,8 @@ $livros = $comando->fetchAll(PDO::FETCH_ASSOC);
                         <td><?= $l['id'] ?></td>
                         <td><?= $l['titulo'] ?></td>
                         <td>
-                            <a class="btn btn-secondary" href="update_livro.php?id=<?= $g['id'] ?>">Editar</a> | 
-                            <a class="btn btn-danger" href="delete_livro.php?id=<?= $g['id'] ?>">Remover</a>
+                            <a class="btn btn-secondary" href="update_livro.php?id=<?= $l['id'] ?>">Editar</a> | 
+                            <a class="btn btn-danger" href="delete_livro.php?id=<?= $l['id'] ?>">Remover</a>
                         </td>
                     </tr>
                 <?php endforeach ?>
